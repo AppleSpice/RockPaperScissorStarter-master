@@ -132,68 +132,69 @@ namespace RockPaperScissorText
             //Console.WriteLine($"Player Chose {playerRPSChoice}.");
             //Console.WriteLine($"PC Chose {rpsComputerPlays}.");
 
-            // TODO: Add logic to determine the winner between the player and computer. You may use either an Else If Statement or Switch Statement to do it. 
+            // Add logic to determine the winner between the player and computer. You may use either an Else If Statement or Switch Statement to do it. 
+
+            //Console.WriteLine($"player choice  {playerRPSNumValue} pc choice {computerRPSRandomNum}");
+
 
             if (playerRPSNumValue == computerRPSRandomNum)
             {
                 Console.WriteLine("It's a tie!");
-                Console.WriteLine($"{yourScore}");
+                Console.WriteLine($"Your score {yourScore}");
             }
-
             else if (playerRPSNumValue == 3)
             {
+
                 if (computerRPSRandomNum == 2)
                 {
                     Console.WriteLine("PC wins!");
                     --yourScore;
-                    Console.WriteLine($"{yourScore}");
+                    Console.WriteLine($"Your score {yourScore}");
                 }
                 else if (computerRPSRandomNum == 1)
                 {
                     Console.WriteLine("Player wins!");
                     ++yourScore;
-                    Console.WriteLine($"{yourScore}");
+                    Console.WriteLine($"Your score {yourScore}");
                 }
-        
+
+            }
             else if (playerRPSNumValue == 2)
+            {
+                if (computerRPSRandomNum == 3)
                 {
-                 if (computerRPSRandomNum == 3)
-                 {
-                        Console.WriteLine("Player wins!");
-                        ++yourScore;
-                        Console.WriteLine($"{yourScore}");
-                 }
-                 else if (computerRPSRandomNum == 1)
-                 {
-                        Console.WriteLine("PC wins!");
-                        --yourScore;
-                        Console.WriteLine($"{yourScore}");
-                 }
+                    Console.WriteLine("Player wins!");
+                    ++yourScore;
+                    Console.WriteLine($"Your score {yourScore}");
+                }
+                else if (computerRPSRandomNum == 1)
+                {
+                    Console.WriteLine("PC wins!");
+                    --yourScore;
+                    Console.WriteLine($"Your score {yourScore}");
+                }
 
             }
             else if (playerRPSNumValue == 1)
             {
                 if (computerRPSRandomNum == 3)
                 {
-                     Console.WriteLine("PC wins!");
-                     --yourScore;
-                     Console.WriteLine($"{yourScore}");
+                    Console.WriteLine("PC wins!");
+                    --yourScore;
+                    Console.WriteLine($"Your score {yourScore}");
                 }
                 else if (computerRPSRandomNum == 2)
                 {
-                     Console.WriteLine("Player wins!");
-                     ++yourScore;
-                     Console.WriteLine($"{yourScore}");
-                 }
+                    Console.WriteLine("Player wins!");
+                    ++yourScore;
+                    Console.WriteLine($"Your score {yourScore}");
+                }
             }
             else
             {
                 Console.WriteLine("uh oh");
             }
-                // TODO: based on whether the player wins or loses, increment or decrement the variable "yourScore". This will be ++yourScore if they win or --yourScore if they lose. If it is a tie, there should be no change. 
-
-        
-            }
+            // based on whether the player wins or loses, increment or decrement the variable "yourScore". This will be ++yourScore if they win or --yourScore if they lose. If it is a tie, there should be no change. 
             PlayAgain();
         }
         public static void PlayAgain()
